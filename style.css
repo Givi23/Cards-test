@@ -34,3 +34,7 @@ body{
     background-repeat: no-repeat;
     cursor: pointer;   
 }
+.active{
+    /* 1+1+1+1+10=14 (slide) */
+    flex: 10;
+}
