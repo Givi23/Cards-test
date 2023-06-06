@@ -32,9 +32,11 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: pointer;   
+    cursor: pointer; 
+    border-radius: 20px; 
+    transition: all 500ms ease-in-out; 
 }
 .active{
-    /* 1+1+1+1+10=14 (slide) */
+    /* 1+1+1+1+10=14 (один slide больше в 10 раз других другие в равных долях ) */
     flex: 10;
 }
