@@ -14,9 +14,8 @@ body{
     width: 100%;
     display: flex;
     padding: 0 20px;
-
 }
-.h1{
+h1{
     position: absolute;
     font-size: 24px;
     bottom: 20px;
@@ -24,6 +23,12 @@ body{
     margin: 0;
     opacity: 0;
     color: aliceblue;
+    
+}
+ .active h1{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+
 }
 .slide{
     height: 80vh;
@@ -35,8 +40,12 @@ body{
     cursor: pointer; 
     border-radius: 20px; 
     transition: all 500ms ease-in-out; 
+   
 }
 .active{
     /* 1+1+1+1+10=14 (один slide больше в 10 раз других другие в равных долях ) */
     flex: 10;
+}
+.bgColor{
+    background-color: blueviolet;
 }

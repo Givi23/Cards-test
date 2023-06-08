@@ -1,19 +1,35 @@
 const slides = document.querySelectorAll(".slide");
+// поиск элемента по его селектору
+const bgColor = document.querySelector("body");
+// отследживает событие произшло что то или нет
+bgColor.addEventListener('click',()=>{
+    bgColor.classList.add("bgColor")
+})
+bgColor.addEventListener('keydown', ()=>{
+    bgColor.classList.remove("bgColor")
+})
+
+// цикл for...of это когда задача стоит сделать однотипное действие много раз (к примеру вывести товары из списка один за другим один код прописываем и все)
+// проходимся по элементам массива
 for(const slide of slides){
     console.log(slide)
+    // первое используем метод отслеживания в браузре (addEventlistener) второе в скобках указываем название события навести на элемент мышкой (mouseover) в данном случае третье вызываем функцию четвертое можем добавить к элементам класс active посредством обращения к элементам (slide) в нашем случае используем список классов (classList) и добовляем (add) класс (active)
     slide.addEventListener('mouseover', ()=>{
         clearActiveClasses()
-        slide.classList.add('active')
+        addActiveClasses(slide)
     })
 }
-// function (кусочек кода который сам по себе не работает пока мы не вызовем, помогает избавится от дублирования кода )
+// function (кусочек кода который сам по себе не работает пока мы не вызовем, помогает избавится от дублирования кода к примеру чтобы в ручную не писать один и тот же код по несколько раз достаточно вызвать функцию )
+// первое обьявить function второе название function третье круглые скобки это синтаксис в них указываем параметры или пустыми остовляем четвертое открываем фигурные скобки это тело внутри тела пишем код к примеру обратимся к модальному окну (alert) пишем alert открываем скобки и внутри через ковычки прописываем текст привет закрываем скобки круглые и в конце скобку фигурную
 function clearActiveClasses(){
     for(const slide of slides){
         slide.classList.remove('active')
     }
 }
-
-
+function addActiveClasses(a){
+    // три точки говорят об ошыбки
+    a.classList.add('active')
+}
 
 
 
