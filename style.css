@@ -46,6 +46,14 @@ h1{
     /* 1+1+1+1+10=14 (один slide больше в 10 раз других другие в равных долях ) */
     flex: 10;
 }
-.bgColor{
+/* .bgColor{
     background-color: blueviolet;
+    
+} */
+.bgColor{
+    background-color: red;
 }
+
+/* .bgTittle h1{
+    background-color: chartreuse;
+} */
